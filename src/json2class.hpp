@@ -293,8 +293,6 @@ private:
     const Ch* m_pEnd;
 };
 
-#include <iostream>
-
 template <class MSGPACK_T>
 void DecodeJsonPack(const std::string& strBuffer, MSGPACK_T& stParam)
 {
@@ -308,8 +306,6 @@ void DecodeJsonPack(const std::string& strBuffer, MSGPACK_T& stParam)
     {
         throw std::bad_cast();
     }
-
-    std::cout << stObj << std::endl;
 
     stObj.convert(&stParam);
 }
